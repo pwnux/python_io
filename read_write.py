@@ -7,3 +7,5 @@ raw_file_lines = raw_file_object.readlines()
 # read a line
 for elm in raw_file_lines:
     print elm.split("\"")[1]
+
+# em day la manh
