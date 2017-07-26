@@ -43,8 +43,8 @@ if __name__ == "__main__":
                 num_pages = page_pager.find_elements_by_tag_name("a")
                 for num_pages_elm in num_pages:
                     num_pages_elm.click()
-                    break
-                break
+                    # break
+                # break
 
     except NoSuchElementException as err:
         print "Khong ton tai, can xem lai"
