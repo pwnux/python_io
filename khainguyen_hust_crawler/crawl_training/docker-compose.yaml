@@ -1,0 +1,36 @@
+version: "2"
+services:
+  crawler:
+    image: crawler
+    networks:
+      - bridge
+    volumes:
+      - ./:/crawl_training
+    hostname: crawler
+    cpu_shares: 512             # 0.5 CPU
+    mem_limit: 2147483648       # 2048 MB RAM
+    tty: true
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+          max-size: "100M"
+          max-file: "3"
+  tor:
+    image: nagev/tor
+    ports:
+        - "9150:9150"
+    networks:
+        - bridge
+    hostname: tor
+    cpu_shares: 1024
+    mem_limit: 1073741824
+    restart: always
+    tty: true
+    logging:
+      driver: "json-file"
+      options:
+          max-size: "100M"
+          max-file: "3"
+networks:
+  bridge:

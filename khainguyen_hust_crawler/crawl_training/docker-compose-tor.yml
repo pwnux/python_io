@@ -1,0 +1,24 @@
+# Create by khainguyen
+# khainguyenptiter@gmail.com
+# Version 2
+
+version: "2"
+services:
+  tor:
+      image: nagev/tor
+      ports:
+          - "9150:9150"
+      networks:
+          - bridge
+      hostname: tor
+      cpu_shares: 1024
+      mem_limit: 1073741824
+      restart: always
+      tty: true
+      logging:
+        driver: "json-file"
+        options:
+            max-size: "100M"
+            max-file: "3"
+networks:
+  bridge:
