@@ -1,0 +1,28 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fmodern\fcharset0 CourierNewPSMT;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww18740\viewh13120\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs48 \cf0 driver = webdriver.Firefox()\
+\
+def get_value(__date__, driver):\
+	driver.get("https://link/..php?ngay=" + __date__)\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 	loto = WebDriverWait(driver, 60).until(\
+		EC.presence_of_element_located((By.ID, "loto"))\
+	)\
+\
+	td_elms = loto.find_elements_by_tag_name("td")\
+	for td_elm in td_elms:\
+		try:\
+			class_ = td_elm.get_attribute("class")\
+			if class_ == "":\
+				continue\
+			elif "vietdam" in class_:\
+				print "giai dac biet: " + td_elm.text\
+			else:\
+				print "giai lo to: " + td_elm.text\
+		except NoAttributeException as err:\
+				continue}
