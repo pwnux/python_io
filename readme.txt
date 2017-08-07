@@ -1,2 +1,13 @@
-- V?n �?: trong 1 cpu, t?i 1 th?i �i?m ch? c� 1 ti?n tr?nh ��?c ch?y, 1 ti?n tr?nh s? c� start time v� end time, cho n ti?n tr?nh v?i th?i gian b?t �?u trong m?ng a, th?i gian ket th�c trong m?ng b t��ng ?ng, vi?t 1 �o?n code �? l?y ra th? t? ch?y c?a c�c ti?n tr?nh sao cho kh�ng g�y xung �?t 
-- Gi?i quy?t v?n �?, s?p x?p m?ng a v� b theo th? th? t�ng d?n theo m?ng a, sau �� l?y ra nh?ng gi� tr? sao cho th?i gian b?t �?u c?a ti?n tr?nh sau kh�ng xung �?t v?i thoi gian ho?t �?ng c?a ti?n tr?nh tr�?c.
+- Vấn đề: trong 1 cpu, tại 1 thời điểm chỉ có 1 tiến trình được thực hiện, 1 tiến trình có start time và end time, cho n tiến trình, thời gian bắt đầu được viết trong mảng a, thời gian kết thúc trong mảng b, bài toán ở đây là lấy ra thứ tự tiến trình sao cho không bị xung đột
+- giải quyết: sắp xếp 2 mảng theo thời gian bắt đầu, sau đó lấy các tiến trình sau cho thời gian bắt đầu của tiến trình sau không xung đột với thời gian làm việc của tiến trình trước
+n = 8
+a = [1, 3, 0, 5, 8, 5, 9, 14 ]    //start time
+b = [2, 4, 6, 7, 9, 9, 12, 18]    //end time
+
+sorted 
+a = [0, 1, 3, 5, 5, 8, 9, 14 ] 
+b = [6, 2, 4, 7, 9, 9, 12, 18]
+
+output
+out =   [0, 8, 14]
+        [6, 9, 18]
