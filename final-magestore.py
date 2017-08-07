@@ -39,3 +39,6 @@ for i in range(len(label)):
     else:
         f1_score[i] = 0.0
 
+print 'Label\tPrecision\tRecall\tF1-Score\n'
+for i in range(len(label)):
+    print '%i\t\%i\t%i\t%i\n' %(i, precision[i], recall[i], f1_score[i])
