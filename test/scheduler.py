@@ -2,6 +2,8 @@ import os
 import getpass
 from crontab import CronTab
 
+from config import PATH
+
 
 def input():
     # lập lịch chạy cho chương tr
@@ -34,7 +36,7 @@ def init_scheduler(at, message):
 
 
 def write_message(at, message):
-    with open('data.txt', 'a') as file:
+    with open(PATH, 'a') as file:
         file.write(str(at) + ' ' + message + '\n')
 
 

@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from config import URL, USERNAME, PASSWORD
+from config import URL, USERNAME, PASSWORD, PATH
 
 
 class AutoFacebook():
@@ -35,7 +35,7 @@ class AutoFacebook():
 
 
 def load_data(index):
-    with open('data.txt') as file:
+    with open(PATH) as file:
         for line in file:
             if index in line:
                 return line.replace(index, '')
