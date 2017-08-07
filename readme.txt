@@ -1,0 +1,1 @@
+Chương trình nhận vào danh sách các lớp có tên, số phiên học trong tuần, giờ bắt đầu, giờ kết thúc. Kiểm tra xem các lớp này có thể tạo thành thời khóa biểu hay không, nếu có lớp trùng nhau, in ra báo cáo và kết thúc chương trình, ngược lại, in ra thời khóa biểu cho mỗi ngày
