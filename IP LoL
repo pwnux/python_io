@@ -1,0 +1,49 @@
+# cach tinh diem thuong IP trong LoL
+# Cong Thuc :
+# IP thuong = IP tho + [(IP/phut) * so phut]
+# Ngoai ra trong vong  24h se co IP thuong tran thang dau tien trong ngay
+
+# Khoang gioi han cua IP thuong
+# Tai ban do 5 vs 5 thi so phut toi thieu la 25 phut va toi da la 55 phut
+# Tai ban do 3 vs 3 thi so phut toi thieu la 25 phut va toi da la 55 phut
+# Danh xep hang thi so phut toi da tang len la 65 phut
+
+# Tham khao cach tinh tai http://namcaovn.blogspot.com/2013/09/cach-tinh-iem-thuong-ip-lol.html
+
+
+def ipthuong(p, w) :
+
+    if i == 1 :
+        heso = 2.231
+        if k == 1:
+            IPtho = 18
+        else :
+            IPtho = 7
+    if i == 0 :
+        IPtho = 7
+        heso = 2
+    if p < 25 :
+        p = 25
+    if (p > 55 and o == 0) :
+        p = 55
+    if (p >55 and o == 1) :
+        p = 65
+
+    if w == 1 :
+        IPthuong = IPtho + 150 + (heso * p)
+    else :
+        IPthuong = IPtho + (heso * p)
+
+    return IPthuong
+
+i = input('Ban dau voi may hay voi nguoi (nguoi la 1 va may la 0) : ')
+p = input('Ban choi xong tran dau trong bao nhieu phut : ')
+k = input('Ban choi thang hay thua (defeat la 0 vs win la 1) : ')
+o = input("ban choi xep hang hay khong? (co la 1 va khong la 0) : ")
+w = input("Day co phai la tran thang dau tien cua ban khong (co la 1 va khong la 0) : ")
+
+print "IP ma ban nhan duoc la : " , ipthuong(p, w)
+
+
+
+
