@@ -48,7 +48,7 @@ if len(lst_score) == 0:
 else:
     for each in range(0,len(lst_score)):
         average = float(0.3*lst_score[each][2]+0.7*lst_score[each][3])
-        sum_average = sum_average+average
+        sum_average = sum_average+average*lst_score[each][1]
         sum_factor = sum_factor + lst_score[each][1]
         print "{0}--{1}--{2}--{3}--{4}--{5}".format(lst_score[each][0],lst_score[each][1],lst_score[each][2],lst_score[each][3],average,classtify(average))
     print "\n"
