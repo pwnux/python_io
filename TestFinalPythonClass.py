@@ -11,7 +11,11 @@ import os
 # Chương trình lấy dữ liệu các học phần và số tín chỉ học phí từ trang sis
 # Chương trình nhắc người dùng các mã học phần và in ra màn hình số tiền của các môn học đó
 # Chương trình được dùng mỗi đầu kì học khi đăng kí tín chỉ, cần tính ngay học phí để điều chỉnh
-# lượng môn học cho phù hợp và biết trước học phí để chuẩn bị
+# lượng môn học cho phù hợp và biết trước học phí để chuẩn bị cho phù hợp
+
+# Các hướng mở rộng của bài toán
+# Viết chương trình lấy dữ liệu thời khóa biểu các môn học
+# Đề xuất các thời khóa biểu cho người dùng đỡ mất công sắp xếp thủ công
 
 
 if __name__ == "__main__":
@@ -57,7 +61,7 @@ lstMaHP = lstMaHP.split(",")
 print(lstMaHP)
 totalCost = 0
 for maHP in lstMaHP:
-    totalCost += dic.get(maHP,0)
+    totalCost += float(dic.get(maHP,0))
 
 totalCost *= HOC_PHI_MOT_TIN_CHI
-print("Hoc phi cua ban la: " + totalCost)
+print("Hoc phi cua ban la: " + str(totalCost) + " nghin")
