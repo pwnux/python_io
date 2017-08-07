@@ -53,6 +53,6 @@ else:
         print "{0}--{1}--{2}--{3}--{4}--{5}".format(lst_score[each][0],lst_score[each][1],lst_score[each][2],lst_score[each][3],average,classtify(average))
     print "\n"
     print "------------"
-    print "CPA:{0}".format(sum_average/sum_factor)
+    print "Average:{0}".format(sum_average/sum_factor)
 
 
