@@ -21,9 +21,6 @@ if __name__ == "__main__":
     driver = webdriver.Firefox()
     driver.get("https://messenger.com")
 
-    id="01675834515"
-    pwd = "Kaito2011"
-
     email = driver.find_element_by_name("email")
     password = driver.find_element_by_name("pass")
     form = driver.find_element_by_id('loginform')
